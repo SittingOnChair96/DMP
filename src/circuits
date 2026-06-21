@@ -1,0 +1,35 @@
+#include "blocks.cpp" 
+
+struct circuit {
+    const char* name;
+    const char* oznaceni;
+    gate hradla[4];
+};
+
+struct gate {
+    block* blokptr;
+    int pins[3];
+};
+
+circuit hradla[] = {
+    {
+        "2inAND",
+        "7408",
+        {
+            {0,0,0},
+            {0,1,0},
+            {1,0,0},
+            {1,1,1}
+        }
+    },
+    {
+        "2inOR",
+        "7432",
+        {
+            {0,0,0},
+            {0,1,1},
+            {1,0,1},
+            {1,1,1}
+        }
+    }
+};
